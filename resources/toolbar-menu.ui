@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<interface>
+  <!-- interface-requires gtk+ 3.0 -->
+  <menu id="menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Append item</attribute>
+        <attribute name="action">win.append-item</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Remove item</attribute>
+        <attribute name="action">win.remove-item</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Show label</attribute>
+        <attribute name="action">win.show-label</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Steak</attribute>
+        <attribute name="action">win.main</attribute>
+        <attribute name="target">steak</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Pizza</attribute>
+        <attribute name="action">win.main</attribute>
+        <attribute name="target">pizza</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

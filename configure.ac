@@ -1,0 +1,14 @@
+AC_INIT([minapp],[0.0.1])
+
+AM_INIT_AUTOMAKE
+
+AC_PROG_CC
+
+PKG_CHECK_MODULES(MINAPP, gtk+-3.0)
+
+AC_CONFIG_FILES([
+Makefile
+src/Makefile
+])
+
+AC_OUTPUT

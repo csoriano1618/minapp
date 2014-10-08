@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <!-- interface-requires gtk+ 3.8 -->
+  <template class="MinAppWindow" parent="GtkApplicationWindow">
+    <property name="title" translatable="yes">Example Application</property>
+    <property name="default-width">600</property>
+    <property name="default-height">400</property>
+        <child type="titlebar">
+          <object class="GtkHeaderBar" id="header">
+            <property name="visible">True</property>
+            <property name="show-close-button">True</property>
+            <child>
+              <object class="GtkMenuButton" id="toolbar_menu_button">
+                <property name="visible">True</property>
+                <property name="direction">none</property>
+                <property name="use-popover">True</property>
+                <style>
+                  <class name="image-button"/>
+                </style>
+              </object>
+              <packing>
+                <property name="pack-type">end</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+    <child>
+      <object class="GtkBox" id="content_box">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+      </object>
+    </child>
+  </template>
+</interface>
