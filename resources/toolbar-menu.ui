@@ -18,15 +18,25 @@
     </section>
     <section>
       <item>
-        <attribute name="label" translatable="yes">Steak</attribute>
-        <attribute name="action">win.main</attribute>
-        <attribute name="target">steak</attribute>
+        <attribute name="label" translatable="yes">Sort</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">Pizza</attribute>
-        <attribute name="action">win.main</attribute>
-        <attribute name="target">pizza</attribute>
+        <attribute name="label" translatable="yes">name</attribute>
+        <attribute name="action">win.sort</attribute>
+        <attribute name="target">sort_by_name</attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">date</attribute>
+        <attribute name="action">win.sort</attribute>
+        <attribute name="target">sort_by_date</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">modify</attribute>
+        <attribute name="action">win.sort</attribute>
+        <attribute name="target">sort_by_modify</attribute>
+      </item>
+    </section>
+    <section>
     </section>
   </menu>
 </interface>
