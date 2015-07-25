@@ -60,10 +60,10 @@ min_app_window_remove_item (GSimpleAction *action,
   while (g_menu_attribute_iter_next (sort_liter))
   {
     attr_name = g_menu_attribute_iter_get_name (sort_liter);
-    if (strcmp(attr_name, "label") == 0)
+    if (g_strcmp0 (attr_name, "label") == 0)
     {
       attr_value = g_variant_print(g_menu_attribute_iter_get_value (sort_liter), FALSE);
-      if (strcmp(attr_value, "'hi'") == 0)
+      if (g_strcmp0 (attr_value, "'hi'") == 0)
       {
         g_menu_remove (G_MENU(sort_section), n_items - 1);
         break;
@@ -86,9 +86,6 @@ min_app_window_sort_order_changed (GSimpleAction *action,
                                    GVariant      *value,
                                    gpointer       user_data)
 {
-  //MinAppWindow *window = MIN_APP_WINDOW (user_data);
-  g_print ("short order changed %s\n", g_variant_print(value, FALSE));
-
   g_simple_action_set_state (action, value);
 }
 
@@ -109,11 +106,9 @@ min_app_window_init (MinAppWindow *win)
 
   win->priv = min_app_window_get_instance_private (win);
   priv = min_app_window_get_instance_private (win);
-  g_print("here\n");
   gtk_widget_init_template (GTK_WIDGET (win));
-  g_print("here after\n");
 
-  builder = gtk_builder_new_from_resource ("/org/min-app/toolbar-menu.ui");
+  builder = gtk_builder_new_from_resource ("/org/Minapp/toolbar-menu.ui");
   win->priv->menu = G_MENU (gtk_builder_get_object (builder, "menu"));
   gtk_menu_button_set_menu_model (GTK_MENU_BUTTON (priv->toolbar_menu_button), G_MENU_MODEL (win->priv->menu));
   g_object_unref (builder);
@@ -128,7 +123,7 @@ static void
 min_app_window_class_init (MinAppWindowClass *class)
 {
   gtk_widget_class_set_template_from_resource (GTK_WIDGET_CLASS (class),
-                                               "/org/min-app/window.ui");
+                                               "/org/Minapp/window.ui");
 
   gtk_widget_class_bind_template_child_private (GTK_WIDGET_CLASS (class), MinAppWindow, toolbar_menu_button);
 }

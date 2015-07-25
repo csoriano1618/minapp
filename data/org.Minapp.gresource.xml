@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/Minapp">
+    <file alias="window.ui" preprocess="xml-stripblanks">resources/window.ui</file>
+    <file alias="toolbar-menu.ui" preprocess="xml-stripblanks">resources/toolbar-menu.ui</file>
+  </gresource>
+</gresources>
